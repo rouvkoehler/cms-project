@@ -39,7 +39,7 @@ jobs:
         with:
           platform: python
           platform-version: '3.7'
-          source-directory: ${{ env.projectpath }}
+      #    source-directory: ${{ env.projectpath }}
           
       # https://github.com/Azure/webapps-deploy
       - name: 'Deploy to Azure Web App'
@@ -47,6 +47,6 @@ jobs:
         with:
           app-name: 'cms-webapplication'
           slot-name: 'production'
-          package: ${{ env.projectpath }}
+      #    package: ${{ env.projectpath }}
           publish-profile: ${{ secrets.CMSAPPLICATOIN_PUBLISHPROFILE }}
 
