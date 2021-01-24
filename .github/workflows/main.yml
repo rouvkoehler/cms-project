@@ -45,7 +45,7 @@ jobs:
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'cms-webapplication'
+          app-name: 'cms-application2'
           slot-name: 'production'
       #    package: ${{ env.projectpath }}
           publish-profile: ${{ secrets.CMSAPPLICATOIN_PUBLISHPROFILE }}
