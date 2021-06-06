@@ -97,7 +97,7 @@ def authorized():
             app.logger.error('KOEHL04: Invalid username or password')
             return render_template("auth_error.html", result=result)
         else:
-            app.logger.info('KOEHL04: Successful login')
+            app.logger.warning('KOEHL04: Successful login')
         session["user"] = result.get("id_token_claims")
         # Note: In a real app, we'd use the 'name' property from session["user"] below
         # Here, we'll use the admin username for anyone who is authenticated by MS
